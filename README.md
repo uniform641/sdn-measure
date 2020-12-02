@@ -16,6 +16,7 @@ Then 'ping' is available.
 
 ### install Ryu
 https://ernie55ernie.github.io/sdn/2019/03/25/install-mininet-and-ryu-controller.html
+https://ryu.readthedocs.io/en/latest/getting_started.html
 
 -----
 ### Linux Bridge & ovs
