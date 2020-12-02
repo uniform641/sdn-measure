@@ -14,6 +14,13 @@ mininet> py net.waitConnected()
 ```
 Then 'ping' is available.
 
+### install Ryu
+https://ernie55ernie.github.io/sdn/2019/03/25/install-mininet-and-ryu-controller.html
+
+-----
+### Linux Bridge & ovs
+https://www.cnblogs.com/bakari/p/8097439.html
+
 ### ovsk vs ovsbr vs ovs vs user
 https://mailman.stanford.edu/pipermail/mininet-discuss/2016-May/006876.html
 
@@ -37,5 +44,3 @@ Key contents
   self.addSwitch(name, cls=OVSKernelSwitch) To add a OVS switch
 ```
 
-### install Ryu
-https://ernie55ernie.github.io/sdn/2019/03/25/install-mininet-and-ryu-controller.html
