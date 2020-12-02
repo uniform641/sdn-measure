@@ -2,8 +2,6 @@
 
 from mininet.topo import Topo
 from mininet.net import Mininet
-from mininet.util import dumpNodeConnections
-from mininet.log import setLogLevel
 
 
 class MyTopo(Topo):
@@ -44,19 +42,4 @@ class MyTopo(Topo):
         self.addLink(s5, s6)
 
 
-def simpleTest():
-    "Create and test a simple network"
-    topo = MyTopo()
-    net = Mininet(topo)
-    net.start()
-    print "Dumping host connections"
-    dumpNodeConnections(net.hosts)
-    print "Testing network connectivity"
-    net.pingAll()
-    net.stop()
-
-
-if __name__ == '__main__':
-    # Tell mininet to print useful information
-    setLogLevel('info')
-    simpleTest()
+topos = {'mytopo':MyTopo}
