@@ -9,8 +9,8 @@ class MyTopo(Topo):
         Topo.__init__(self)
 
         # Add hosts
-        u1 = self.addHost('u1')
-        u2 = self.addHost('u2')
+        u1 = self.addHost('u1', ip="10.0.1.1/24")
+        u2 = self.addHost('u2', ip="10.0.2.1/24")
         u3 = self.addHost('u3')
         u4 = self.addHost('u4')
         server = self.addHost('server')
