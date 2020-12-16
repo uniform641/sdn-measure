@@ -1,5 +1,9 @@
 ## TODO
-- [ ] make our custom topology work with controller `Ryu`
+- [x] make our custom topology work with controller `Ryu`
+- [x] classic routing
+- [ ] classic routing performance testing
+- [ ] SDN routing with varied strategies
+- [ ] SDN routing performance testing
 ...
 ## Tutorial || Q&A
 ### create topology from mininet
