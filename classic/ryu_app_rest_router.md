@@ -1,12 +1,12 @@
-# 如何使用 ryu.app.rest_router
+## 如何使用 ryu.app.rest_router
 
-## 启动
+### 启动
 
 ```shell
 ryu-manager ryu.app.rest_router
 ```
 
-## API 接口
+### API 接口
 
 `GET http://localhost:8080/router/0000000000000001 ` 是得到`01`号router的信息
 
@@ -22,3 +22,18 @@ POST http://localhost:8080/router/0000000000000001
 + `"gateway":""`指定路由路径，**后面的参数填的是要送到的下一跳地址**
 + `"destination"`指定目的地址
 
+## 如何运行
+
+首先开启RYU和mininet，然后：
+
+```shell
+python make_route.py
+```
+
+之后在mininet中用
+
+```shell
+ip route add default via 
+```
+
+给各个终端添加默认路由
