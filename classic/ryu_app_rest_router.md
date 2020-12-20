@@ -6,6 +6,12 @@
 ryu-manager ryu.app.rest_router
 ```
 
+```shell
+sudo mn --custom ~/create_topo.py --topo mytopo --switch ovs --controller remote,ip=192.168.233.130 --link tc
+```
+
+
+
 ### API 接口
 
 `GET http://localhost:8080/router/0000000000000001 ` 是得到`01`号router的信息
