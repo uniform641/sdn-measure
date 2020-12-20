@@ -1,7 +1,7 @@
 ## TODO
 - [x] make our custom topology work with controller `Ryu`
 - [x] classic routing
-- [ ] classic routing performance testing
+- [x] classic routing performance testing
 - [ ] SDN routing with varied strategies
 - [ ] SDN routing performance testing
 ...

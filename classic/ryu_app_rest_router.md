@@ -43,3 +43,13 @@ ip route add default via
 ```
 
 给各个终端添加默认路由
+
+```shell
+u1 ip route add default via 172.18.0.2
+u2 ip route add default via 172.18.1.2
+u3 ip route add default via 172.18.2.2
+u4 ip route add default via 172.18.3.2
+u5 ip route add default via 172.18.4.2
+
+pingall
+```
