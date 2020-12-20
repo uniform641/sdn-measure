@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 271, in packet_in_handler
+    RouterController.packet_in_handler(ev.msg)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 374, in packet_in_handler
+    router.packet_in_handler(msg)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 583, in packet_in_handler
+    self[vlan_id].packet_in_handler(msg, header_list)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 950, in packet_in_handler
+    self._packetin_arp(msg, header_list)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 978, in _packetin_arp
+    gw_flg = self._update_routing_tbl(msg, header_list)
+  File "/home/uniform64/.local/lib/python3.8/site-packages/ryu/app/rest_router.py", line 1168, in _update_routing_tbl
+    dst_mac = self.port_data[out_port].mac
+KeyError: 3
