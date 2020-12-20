@@ -1,0 +1,72 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:f4:e3:c0 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.127/24 brd 192.168.1.255 scope global eth0
+       valid_lft forever preferred_lft forever
+3: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default 
+    link/ether a2:7e:48:33:b1:18 brd ff:ff:ff:ff:ff:ff
+134: s2-eth2@s1-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether e2:b4:36:06:9d:78 brd ff:ff:ff:ff:ff:ff
+135: s1-eth2@s2-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether ae:c1:6e:fe:22:67 brd ff:ff:ff:ff:ff:ff
+136: s5-eth2@s1-eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether ce:14:da:04:39:31 brd ff:ff:ff:ff:ff:ff
+137: s1-eth4@s5-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 7e:e6:a9:4a:73:80 brd ff:ff:ff:ff:ff:ff
+138: s6-eth1@s1-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 02:3c:46:3a:1c:a8 brd ff:ff:ff:ff:ff:ff
+139: s1-eth3@s6-eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 0e:01:b6:7a:af:54 brd ff:ff:ff:ff:ff:ff
+140: s1-eth1@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether c2:5e:2b:ff:d0:51 brd ff:ff:ff:ff:ff:ff
+141: s3-eth2@s2-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 42:e7:d9:24:3c:a2 brd ff:ff:ff:ff:ff:ff
+142: s2-eth3@s3-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether b6:80:1a:c2:b8:37 brd ff:ff:ff:ff:ff:ff
+143: s4-eth2@s2-eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 0e:a7:53:ef:fd:a8 brd ff:ff:ff:ff:ff:ff
+144: s2-eth4@s4-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 8e:db:b1:c9:b7:84 brd ff:ff:ff:ff:ff:ff
+145: s6-eth2@s2-eth5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 86:b6:f3:31:c6:a9 brd ff:ff:ff:ff:ff:ff
+146: s2-eth5@s6-eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 0e:d3:f5:2b:d0:44 brd ff:ff:ff:ff:ff:ff
+147: s2-eth1@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 46:c9:8d:6d:9f:9d brd ff:ff:ff:ff:ff:ff
+148: s4-eth3@s3-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 36:28:26:21:66:19 brd ff:ff:ff:ff:ff:ff
+149: s3-eth3@s4-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 7e:64:03:27:41:aa brd ff:ff:ff:ff:ff:ff
+150: s3-eth1@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether b2:41:d6:52:4b:87 brd ff:ff:ff:ff:ff:ff
+151: s5-eth3@s4-eth5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 02:79:58:8c:af:e4 brd ff:ff:ff:ff:ff:ff
+152: s4-eth5@s5-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 3e:20:9a:e1:96:69 brd ff:ff:ff:ff:ff:ff
+153: s6-eth3@s4-eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether c2:2d:fe:91:33:6f brd ff:ff:ff:ff:ff:ff
+154: s4-eth4@s6-eth3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether ae:5c:e9:13:18:34 brd ff:ff:ff:ff:ff:ff
+155: s4-eth1@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 12:59:59:0e:8d:df brd ff:ff:ff:ff:ff:ff
+156: s6-eth4@s5-eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 5a:64:8d:05:c9:20 brd ff:ff:ff:ff:ff:ff
+157: s5-eth4@s6-eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 6a:fa:dd:4c:50:7f brd ff:ff:ff:ff:ff:ff
+158: s5-eth1@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 8e:39:8a:4c:d5:c6 brd ff:ff:ff:ff:ff:ff
+159: s4: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 9e:a5:06:ce:4e:49 brd ff:ff:ff:ff:ff:ff
+160: s5: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 4a:b2:49:60:36:4b brd ff:ff:ff:ff:ff:ff
+161: s3: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 32:e8:31:0e:e2:41 brd ff:ff:ff:ff:ff:ff
+162: s2: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 12:a5:56:e0:4e:41 brd ff:ff:ff:ff:ff:ff
+163: s6: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 1e:d1:4b:03:d5:4d brd ff:ff:ff:ff:ff:ff
+164: s1: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 36:c0:b1:9a:f2:43 brd ff:ff:ff:ff:ff:ff

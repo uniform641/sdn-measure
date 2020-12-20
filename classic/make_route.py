@@ -17,7 +17,7 @@ distance_list =\
     [ 4, 5, 2 ]
   ]
 
-router_url = "http://localhost:8080/router/"
+router_url = "http://127.0.0.1:8080/router/"
 
 def exist_link(num1, num2):
   for i in distance_list:
