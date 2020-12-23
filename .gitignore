@@ -1,2 +1,3 @@
 create_weighted_topo.py
 test*.py
+*.cap

@@ -53,3 +53,15 @@ u5 ip route add default via 172.18.4.2
 
 pingall
 ```
+
+## test
+
+tcp :
+```shell
+u1 iperf3 -c u3 -t 20 > u1-3.tcp &
+```
+
+udp :
+```shell
+u1 iperf3 -c u6 -u -b 40M > u1-e.udp &
+```

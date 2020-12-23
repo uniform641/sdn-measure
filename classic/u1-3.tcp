@@ -1,0 +1,29 @@
+Connecting to host 172.18.2.1, port 5201
+[  4] local 172.18.0.1 port 35178 connected to 172.18.2.1 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec  1.96 MBytes  16.5 Mbits/sec    0    122 KBytes       
+[  4]   1.00-2.00   sec  4.35 MBytes  36.5 Mbits/sec    0    313 KBytes       
+[  4]   2.00-3.00   sec  6.90 MBytes  57.9 Mbits/sec    0    597 KBytes       
+[  4]   3.00-4.00   sec  6.24 MBytes  52.4 Mbits/sec    0    880 KBytes       
+[  4]   4.00-5.00   sec  2.50 MBytes  21.0 Mbits/sec    0    963 KBytes       
+[  4]   5.00-6.00   sec  1.25 MBytes  10.5 Mbits/sec    0   1011 KBytes       
+[  4]   6.00-7.00   sec  0.00 Bytes  0.00 bits/sec    7    986 KBytes       
+[  4]   7.00-8.00   sec  0.00 Bytes  0.00 bits/sec   12    814 KBytes       
+[  4]   8.00-9.00   sec  0.00 Bytes  0.00 bits/sec   11    730 KBytes       
+[  4]   9.00-10.00  sec  1.25 MBytes  10.5 Mbits/sec    0    730 KBytes       
+[  4]  10.00-11.00  sec  0.00 Bytes  0.00 bits/sec   27    730 KBytes       
+[  4]  11.00-12.02  sec  0.00 Bytes  0.00 bits/sec   31    730 KBytes       
+[  4]  12.02-13.00  sec  1.25 MBytes  10.6 Mbits/sec   49    136 KBytes       
+[  4]  13.00-14.00  sec  0.00 Bytes  0.00 bits/sec    0    158 KBytes       
+[  4]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec    6    175 KBytes       
+[  4]  15.00-16.00  sec  5.00 MBytes  42.0 Mbits/sec   30    386 KBytes       
+[  4]  16.00-17.00  sec  5.00 MBytes  41.9 Mbits/sec    0    411 KBytes       
+[  4]  17.00-18.00  sec  6.25 MBytes  52.4 Mbits/sec    0    426 KBytes       
+[  4]  18.00-19.00  sec  5.00 MBytes  41.9 Mbits/sec    0    433 KBytes       
+[  4]  19.00-20.00  sec  6.25 MBytes  52.4 Mbits/sec    0    433 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-20.00  sec  53.2 MBytes  22.3 Mbits/sec  173             sender
+[  4]   0.00-20.00  sec  48.7 MBytes  20.4 Mbits/sec                  receiver
+
+iperf Done.
