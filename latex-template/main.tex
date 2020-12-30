@@ -8,9 +8,7 @@
     % 论文前置部分
     \frontmatter
         \pagenumbering{Roman}
-        \maketitle    % 封面
-        \makedisclaim       % 学术诚信声明
-        \makeabstract       % 中英文摘要
+        \maketitle
         \maketableofcontents        % 目录
         \makelistoffiguretable
 
@@ -27,20 +25,11 @@
         \newclearpage
         \include{docs/chap04}
         \newclearpage
-        \include{docs/chap05}
-        \newclearpage
-        % 结语
 
     % 附录部分
     \backmatter
         % 参考文献. 因不需要纳入章节目录, 故放入附录部分
         % 实际上参考文献是属于论文主体部分
         \makereferences
-
-        % 附录
-    \appendix
-        \include{docs/appendix1}
-        \newclearpage
-    \makeGrade      % 成绩评定记录表
 \end{document}
 

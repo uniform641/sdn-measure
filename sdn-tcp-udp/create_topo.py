@@ -15,6 +15,8 @@ class MyTopo(Topo):
         u4 = self.addHost('u4', ip="172.18.3.1/24")
         u5 = self.addHost('u5', ip="172.18.4.1/24")
         u6 = self.addHost('u6', ip="172.18.2.3/24")
+        u7 = self.addHost('u7', ip="172.18.2.4/24")
+        u8 = self.addHost('u8', ip="172.18.2.5/24")
 
         # Add switches
         s1 = self.addSwitch('s1')
@@ -29,6 +31,8 @@ class MyTopo(Topo):
         self.addLink(s2, u2)
         self.addLink(s3, u3)
         self.addLink(s3, u6)
+        self.addLink(s3, u7)
+        self.addLink(s3, u8)
         self.addLink(s4, u4)
         self.addLink(s5, u5)
 

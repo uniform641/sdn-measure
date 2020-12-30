@@ -1,0 +1,29 @@
+Connecting to host 172.18.2.1, port 5201
+[  4] local 172.18.0.1 port 55840 connected to 172.18.2.1 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec  8.64 MBytes  72.5 Mbits/sec    0   1.14 MBytes       
+[  4]   1.00-2.00   sec  7.50 MBytes  62.9 Mbits/sec    0   1.42 MBytes       
+[  4]   2.00-3.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.70 MBytes       
+[  4]   3.00-4.00   sec  6.25 MBytes  52.4 Mbits/sec    0   1.97 MBytes       
+[  4]   4.00-5.00   sec  7.50 MBytes  62.9 Mbits/sec    0   2.25 MBytes       
+[  4]   5.00-6.00   sec  3.75 MBytes  31.5 Mbits/sec    0   2.42 MBytes       
+[  4]   6.00-7.01   sec  1.25 MBytes  10.4 Mbits/sec    0   2.48 MBytes       
+[  4]   7.01-8.01   sec  0.00 Bytes  0.00 bits/sec    0   2.52 MBytes       
+[  4]   8.01-9.00   sec  1.25 MBytes  10.5 Mbits/sec    0   2.57 MBytes       
+[  4]   9.00-10.00  sec  0.00 Bytes  0.00 bits/sec  133   2.06 MBytes       
+[  4]  10.00-11.00  sec  0.00 Bytes  0.00 bits/sec  571   1.80 MBytes       
+[  4]  11.00-12.00  sec  0.00 Bytes  0.00 bits/sec    0   1.80 MBytes       
+[  4]  12.00-13.00  sec  0.00 Bytes  0.00 bits/sec    0   1.80 MBytes       
+[  4]  13.00-14.00  sec  0.00 Bytes  0.00 bits/sec    1   1.41 KBytes       
+[  4]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec    0   1.41 KBytes       
+[  4]  15.00-16.00  sec  0.00 Bytes  0.00 bits/sec    0   1.41 KBytes       
+[  4]  16.00-17.00  sec  0.00 Bytes  0.00 bits/sec    0   1.41 KBytes       
+[  4]  17.00-18.00  sec  0.00 Bytes  0.00 bits/sec    2   2.83 KBytes       
+[  4]  18.00-19.00  sec  0.00 Bytes  0.00 bits/sec    7   9.90 KBytes       
+[  4]  19.00-20.00  sec  0.00 Bytes  0.00 bits/sec    0   9.90 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-20.00  sec  42.4 MBytes  17.8 Mbits/sec  714             sender
+[  4]   0.00-20.00  sec  33.0 MBytes  13.9 Mbits/sec                  receiver
+
+iperf Done.

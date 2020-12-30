@@ -229,8 +229,8 @@
             \includegraphics[width=10cm]{image/SYSULogo} \\
             \songti
             \vspace{\baselineskip}
-            \zihao{-0}\textbf{本科生毕业论文（设计）} \\
-            \zihao{2}\textbf{\textrm{Undergraduate Graduation Thesis（Design）}} \\
+            \zihao{-0}\textbf{本科生实验报告} \\
+            \zihao{2}\textbf{\textrm{Undergraduate Experiment Report}} \\
             \vspace{2\baselineskip}
 
             {\fontsize{15}{10}\selectfont
@@ -249,9 +249,7 @@
                     \vspace{8pt} \\
                     学\hspace{0.5\ccwd}号 \\
                     \makebox[3cm]{Student No.:\hfill} \underline{\makebox[8cm]{\hfill\@studentid\hfill}}\\
-                    \vspace{8pt} \\
-                    指导教师（职 称） \\
-                    \makebox[4cm]{Supervisor (Title):\hfill} \underline{\makebox[7cm]{\hfill\@cmentor\hspace{2.7cm}}}
+                    \vspace{8pt}
             \end{tabular}
             }
             \vfill
