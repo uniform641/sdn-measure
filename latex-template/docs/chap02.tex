@@ -16,7 +16,66 @@
 
 \section{实现方案与技术细节}
 
-\subsection{传统路由和基于TCP与UDP路由的实现方案}
+\subsection{实现方案}
+
+\subsubsection{拓扑设计}
+
+拓扑设计参照实验要求，实验时的拓扑如下：
+
+\input{figure/chap03_topo_all.tex}
+
+其中，$u_{3},u_{6},u_{7},u_{8}$ 作为iperf3测试时的服务器，
+$u_{1},u_{5}$作为iperf3测试时的客户端。
+
+各链路均有带宽和延迟的参数，如下表所示：
+
+\input{table/chap02_speed.tex}
+
+\subsubsection{传统路由方案设计}
+
+使用Ryu控制器自带的 \texttt{ryu.app.rest\_router}，可以进行传统的基于最短距离的路由。
+
+\texttt{ryu.app.rest\_router}实现了两个功能：
+
+\begin{itemize}
+	\item 生成路由规则并下发给Switch。这样一来每个Switch都可以看作一个路由器。
+	\item 支持通过一套Restful API对路由规则进行增删改查，这样一来外部可以根据需要修改路由规则。
+\end{itemize}
+
+但这个APP并不能自动地进行路由规则的生成，我们需要通过某种规则来生成路由并通过此APP的Restful API部署生成的路由规则。
+\texttt{classic/make\_route.py}文件就实现了根据最短路径算法生成路由并告知\texttt{ryu.app.rest\_router}的过程。
+
+主要的生成过程如下：
+
+\begin{enumerate}
+	\item 把拓扑视作一个图，通过在每个点进行Dijkstra算法生成两点之间的最短路径。
+	\item 通过路径生成路由信息。
+如$u_1$到$u_3$的最短路径是$u_1 \rightarrow u_2 \rightarrow u_3$，
+那么生成类似于$(dst:u_3, next\_hop:u_2)$的路由信息。
+	\item 把生成的路由信息发送给\texttt{ryu.app.rest\_router}
+\end{enumerate}
+
+这样的方法需要我们提前给定两个点之间的边权，这里把延迟作为边权。
+
+\subsubsection{基于TCP与UDP路由的SDN路由方案设计}
+
+首先给定一套把从$u_1$和$u_5$发出的TCP和UDP进行分流的方案：
+
+\input{figure/chap02_topo_tcp_udlp.tex}
+
+如图，红色路径是TCP流的路径，蓝色路径是UDP流的路径。
+
+实现这个路径需要用到Ryu控制器自带的\texttt{ryu.app.ofctl\_rest}，
+这个APP提供了一套增删改查任意Switch流表的Restful API，
+使用它可以方便地创建所需的流表项。
+
+在传统路由的基础上创建几个特定的高优先级流表项即可。
+
+\subsubsection{Qos性能测试设计}
+
+这里采用了iperf3工具进行测试。iperf3工具可以创建一段时间的TCP和UDP通信，
+这一段通信的速率、延迟、丢包等信息可以帮助我们获取Qos性能信息。
+也可以在测试时实时进行报文抓取，这也反映了很多Qos性能信息。
 
 \subsection{实现传统路由}
 
@@ -225,3 +284,42 @@
 1\cite{long2015fully}
 
 \section{实验中遇到的挑战与问题及其解决方法}
+
+\subsection{Ryu控制器的内部问题}
+
+在金钰同学的计算机上测试时，Ryu控制器的内置\texttt{ryu.app.rest\_router}不能正常地进行工作。
+报错信息为python中的\texttt{KeyError}，即一个哈希表的键不存在。这个问题并不源于\texttt{ryu.app.rest\_router}，
+真正的错误来源是Ryu控制器的内部组件。
+
+在李晨曦同学的计算机上测试时，Ryu控制器的内置\texttt{ryu.app.gui\_topology}
+不能正常地工作。表现为浏览\texttt{http://ip\_of\_B:8080}后，应该出现拓扑图的区域空无一物。
+
+这两个问题都涉及到Ryu控制器的内部问题。李晨曦同学通过重新安装了Ryu控制器解决了问题，
+金钰同学通过拷贝李晨曦同学主机上的的Ryu控制器并覆盖到相应位置解决了问题。
+
+\subsection{Mininet内置Shell的不便}
+
+Mininet内置的Shell语法类似于
+$$ host\ command $$
+
+乍看之下，这没有什么问题。然而，实际上这有比较严重的问题。
+首先，这样的设计使得它无法正常地使用Shell脚本批量地对\textbf{不同主机}执行命令。
+这导致每次配置拓扑中主机的默认网关时都要手动输入8条命令。
+
+其次，无论是\texttt{\&\&}操作符还是\texttt{$\backslash$}分行符号，
+在Mininte Shell中的语义均是『在一个主机上执行』。也就是说，
+
+\begin{lstlisting}
+	u1 ls . && u2 cd ..
+\end{lstlisting}
+
+会被理解为在$u_1$上执行
+
+\begin{lstlisting}
+	ls . && u2 cd ..
+\end{lstlisting}
+
+这样导致无法通过『复制粘贴写好的命令』来解决这个问题。
+
+实际上，这个问题我们最终也未能解决，只能留待日后探索了。
+
