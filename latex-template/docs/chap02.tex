@@ -1,9 +1,10 @@
 \chapter{方案设计}
 \label{cha:example}
 
-\setmonofont{Cascadia Code}
-\newfontfamily\cyrillicfonttt{Cascadia Code}
-\newfontfamily\englishfonttt{Cascadia Code}
+
+\setmonofont [Path = fonts/] {CascadiaCode}
+\newfontfamily\cyrillicfonttt [Path = fonts/] {CascadiaCode}
+\newfontfamily\englishfonttt [Path = fonts/] {CascadiaCode}
 
 \lstset{
     basicstyle = \small\ttfamily,
@@ -12,7 +13,37 @@
 
 \section{课程作业目的}
 
+本实验旨在通过对同一网络拓扑实现经典路由与基于SDN的路由，对比二者的性能差异，进而验证SDN相较于传统网络的灵活性与优越性。
+
 \section{场景设计与预期要求}
+
+\subsection{实验场景设计}
+
+设计如下的小型网络拓扑进行实验：
+
+\input{figure/chap02_raw_topo.tex}
+
+其中C为控制器，S为SDN交换机，u1-u5为终端。我们设计以下两种路由策略：
+
+\begin{enumerate}
+	\item 按目的地址路由：采用最短路径算法
+	\item 按多重约束路由：目的地址+传输层协议类型（UDP通道，TCP通道）
+\end{enumerate}
+
+在测试时令u1, u5同时发送TCP/UDP流到服务器，分别在每个SDN交换机采集流量，
+分析传统IP路由和SDN路由的各项QoS性能指标。
+
+\subsection{实验预期要求}
+
+依照上述场景设计，实验应达到如下预期要求：
+
+\begin{itemize}
+	\item 在mininet中依照实验场景搭建网络拓扑
+	\item 在该拓扑上成功实现并运行按目的地址路由
+	\item 在该拓扑上成功实现并运行按多重约束路由
+	\item 实现一种通用的测量链路节点QoS性能指标的方法，以便对两种路由策略进行对比与评价
+\end{itemize}
+
 
 \section{实现方案与技术细节}
 
