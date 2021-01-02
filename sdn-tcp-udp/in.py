@@ -48,9 +48,9 @@ try:
   write_and_flush(p, "pingall")
   for i in test_cmd:
     write_and_flush(p, i)
-  time.sleep(24)
+  time.sleep(30)
   for i in test_cmd2:
     write_and_flush(p, i)
-  time.sleep(24)
+  time.sleep(22)
 finally:
   p.kill()
