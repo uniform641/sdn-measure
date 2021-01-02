@@ -7,10 +7,8 @@ ryu-manager ryu.app.rest_router
 ```
 
 ```shell
-sudo mn --custom ~/create_topo.py --topo mytopo --switch ovs --controller remote,ip=192.168.233.130 --link tc
+sudo mn --custom create_topo.py --topo mytopo --switch ovs --controller remote,ip=192.168.233.130 --link tc
 ```
-
-
 
 ### API 接口
 
