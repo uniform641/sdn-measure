@@ -1,0 +1,18 @@
+% \usepackage{booktabs}
+% \usepackage{caption}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    测试情况 & 测试对象 & $\eta$ \\
+    \midrule
+    传统路由，$\texttt{UDP}=40Mbps$ & $u_1 \rightarrow u_3$ & 0.882 \\
+    传统路由，$\texttt{UDP}=40Mbps$ & $u_5 \rightarrow u_7$ & 0.903 \\
+    SDN路由，$\texttt{UDP}=40Mbps$ & $u_1 \rightarrow u_3$ & 0.997 \\
+    SDN路由，$\texttt{UDP}=40Mbps$ & $u_5 \rightarrow u_7$ & 0.987 \\
+    SDN路由，$\texttt{UDP}=100Mbps$ & $u_1 \rightarrow u_3$ & 0.991 \\
+    SDN路由，$\texttt{UDP}=100Mbps$ & $u_5 \rightarrow u_7$ & 0.991 \\
+    \bottomrule
+  \end{tabular}
+  \caption{$\eta$数值表}
+  \end{table}

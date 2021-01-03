@@ -28,7 +28,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     files = args.file
     '''
-    folder = 'classic'
+    folder = 'sdn-tcp-udp'
     files = [dataFile for dataFile in os.listdir(folder) if (
         dataFile.endswith('tcp') or dataFile.endswith('udp'))]
 
